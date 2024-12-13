@@ -1,0 +1,17 @@
+@media screen and (max-width: 768px) {
+    .intro {
+        width: auto;
+        margin-left: 5vw;
+    }
+
+    .technology h1 {
+        font-size: 30px;
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+}

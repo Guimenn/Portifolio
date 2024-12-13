@@ -1,0 +1,304 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Fleur+De+Leah&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playwrite+DE+VA+Guides&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Global styles
+ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url(../../img/iconizer-iconizer-CURSOR-Voce.svg) 17 17, pointer !important;
+}
+
+/**
+ * HTML and body styles
+ */
+html,
+body {
+    min-height: 100vh;
+    background: url(../../img/img.png) center center no-repeat fixed;
+    background-color: black;
+    color: white    ;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/**
+ * Nav styles
+ */
+nav,
+nav ul {
+    background-color: transparent !important;
+    color: #19D1C2 !important;
+}
+
+nav ul li a:hover {
+    color: #19D1C2 !important;
+    background-color: transparent !important;
+}
+
+/**
+ * Intro styles
+ */
+.intro {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    justify-content: center;
+    margin-left: 10vw;
+    height: 100vh;
+    width: 600px;
+}
+
+.name {
+    font-size: 1.3rem;
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+}
+
+.name h1 {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.452);
+}
+
+.name img {
+    border-radius: 50%;
+    border: 2px solid #19D1C2;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+}
+
+.name img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #19D1C2;
+
+}
+
+.title h1 {
+    font-weight: 600;
+    font-size: 45px;
+    text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.185);
+}
+
+.title p {
+    font-weight: 400;
+    font-size: 20px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.082);
+}
+
+/**
+ * Technology styles
+ */
+.technology {
+    height: 100vh;
+}
+
+.technology img {
+    color: #19D1C2;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border: 1px solid #1d1d1d;
+    border-radius: 10px;
+    width: 150px;
+    padding: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.cards {
+    width: 30%;
+}
+
+.technology h1 {
+    font-size: 45px;
+    text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.185);
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+}
+
+.card:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px #19D1C2;
+}
+
+.card:hover {
+    color: red;
+}
+
+#typewriter {
+    border-right: 2px solid white;
+    /* Cursor animado */
+    white-space: nowrap;
+    overflow: hidden;
+    width: 20ch;
+    /* Define o tamanho do texto */
+}
+
+
+.me {
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.11);
+    backdrop-filter: blur(50px);
+}
+
+.galeria {
+    margin: auto;
+    width: 70vw;
+    height: 100vh;
+}
+
+.title-degradado {
+    color: transparent;
+    --webkikt-background-clip: text;
+    background-image: linear-gradient(to right, #19D1C2, #087e74);
+    font-size: 50px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.082);
+    font-weight: 400;
+}
+
+.title-degradad {
+    background-image: linear-gradient(to right, #19D1C2, #087e74);
+    font-weight: 400;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.082);
+}
+
+.job {
+    height: 100vh;
+}
+
+.job>h1 {
+    margin: 30px 0px;
+}
+
+.card-job {
+    padding: 1.5rem;
+    border: 1px solid rgba(75, 74, 74, 0.781);
+    background-color: transparent;
+}
+
+
+.job-cards {
+    margin: auto;
+    
+}
+
+.job-cards img {
+    width: 495px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.job-cards p {
+    font-family: "nunito sans", sans-serif;
+    font-weight: 300;
+}
+
+.job-cards h5 {
+    font-family: "nunito sans", sans-serif;
+    font-weight: 600;
+}
+
+.button-projeto {
+    background-color: #19D1C2;
+    filter: brightness(50%);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.button-projeto:hover {
+    transform: scale(1.1);
+    filter: brightness(100%);
+
+}
+
+.card-me {
+    color: #19D1C2;
+    font-weight: 400;
+    font-size: 20px;
+    font-family: "nunito sans", sans-serif;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.082);
+    width: 100%;
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+.texts h1 {
+    font-size: 45px;
+    text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.185);
+    font-weight: 400;
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+.texts span {
+    color: #19D1C2;
+    font-weight: 400;
+    font-family: "nunito sans", sans-serif;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.082);
+}
+
+.texts h2 {
+    font-size: 25px;
+    text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.185);
+    font-weight: 400;
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+.card-me p {
+    width: 520px;
+}
+
+.me-dentro {
+    height: 100%;
+    align-items: center;
+}
+
+.me svg {
+    margin: 10px 4px;
+    border-radius: 10px;
+}
+
+.git, .insta, .whats, .linkedin {
+    border-radius: 50%;
+    margin: 10px 4px;
+}
+
+.name {
+    margin: 30px 0px;
+    font-size: 30px;
+}
