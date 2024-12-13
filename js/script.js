@@ -58,11 +58,10 @@ if (typeof ScrollReveal !== 'undefined') {
     duration: 400
   });
 
-  const bottom = ['#tech', '.card'];
-  const left = ['.feature-item', '.text'];
-  const right = ['.feature-item', '.text-p'];
+  const bottom = ['#tech', '.card', '.insta', '.git', '.whats','.linkedin'];
+  const left = ['.texts', '.text' ];
+  const right = ['.text-p'];
   const top = ['.feature-item'];
-  const reveal = ['.block'];
 
   const revealElements = (elements, options) => {
     elements.forEach((element) => {
