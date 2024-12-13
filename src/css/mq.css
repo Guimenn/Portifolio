@@ -13,5 +13,9 @@
         flex-wrap: wrap;
         width: 100%;
     }
+
+    .job {
+        height: 110vh;
+    }
     
 }
