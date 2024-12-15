@@ -17,5 +17,9 @@
     .job {
         height: 110vh;
     }
+
+    .card-comp {
+        width: 100%;
+    }
     
 }

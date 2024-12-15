@@ -309,7 +309,6 @@ nav ul li a:hover {
     font-weight: 400;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.082);
     font-family: "nunito sans", sans-serif;
-    height: 120vh;
     width: 100vw;
     display: flex;
     /* margin: auto; */
