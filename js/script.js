@@ -113,15 +113,17 @@ ScrollReveal().reveal(JobCards2, {
   rotate: 30,
   delay: 600,
   interval: 500
-}); let projetos = [
+}); 
+
+let projetos = [
   {
     title: "Rimac",
-    image: "../img/rimac.png", // Caminho da imagem do projeto Rimac
+    image: "./img/rimac.png",
     link: "https://guimenn.github.io/Rimac"
   },
   {
     title: "Bugatti",
-    image: "../img/Bugatti.png", // Caminho da imagem do projeto Bugatti
+    image: "./img/Bugatti.png", 
     link: "https://guimenn.github.io/Bugatti"
   }
 ];
@@ -132,6 +134,9 @@ projetos.forEach(projeto => {
   // Criação do item de lista para o projeto
   let projetoLi = document.createElement("li");
   projetoLi.classList.add("li-projeto", "cursor-pointer", "font-semibold", "transition", "duration-300");
+
+  const img = new Image();
+  img.src = projeto.image; // Isso pré-carrega a imagem
 
   let projetoLink = document.createElement("a");
   projetoLink.setAttribute("href", projeto.link);
