@@ -58,10 +58,10 @@ if (typeof ScrollReveal !== 'undefined') {
     duration: 400
   });
 
-  const bottom = ['#tech', '.card', '.insta', '.git', '.whats','.linkedin'];
-  const left = ['.texts', '.text' ];
-  const right = ['.text-p'];
-  const top = ['.feature-item'];
+  const bottom = ['#tech', '.card', '.insta', '.git', '.whats', '.linkedin', '.name-projetos'];
+  const left = ['.texts', '.text', '#left'];
+  const right = ['.text-p', '#right'];
+  const top = ['.feature-item', '#top'];
 
   const revealElements = (elements, options) => {
     elements.forEach((element) => {
@@ -113,4 +113,92 @@ ScrollReveal().reveal(JobCards2, {
   rotate: 30,
   delay: 600,
   interval: 500
+}); let projetos = [
+  {
+    title: "Rimac",
+    image: "../img/rimac.png", // Caminho da imagem do projeto Rimac
+    link: "https://guimenn.github.io/Rimac"
+  },
+  {
+    title: "Bugatti",
+    image: "../img/Bugatti.png", // Caminho da imagem do projeto Bugatti
+    link: "https://guimenn.github.io/Bugatti"
+  }
+];
+let nameProjetos = document.querySelector(".name-projetos");
+let imageProjeto = document.querySelector(".image-projetos");
+
+projetos.forEach(projeto => {
+  // Criação do item de lista para o projeto
+  let projetoLi = document.createElement("li");
+  projetoLi.classList.add("li-projeto", "cursor-pointer", "font-semibold", "transition", "duration-300");
+
+  let projetoLink = document.createElement("a");
+  projetoLink.setAttribute("href", projeto.link);
+  projetoLink.setAttribute("target", "_blank");
+  projetoLink.classList.add("projeto-link");
+
+  let projetoDiv = document.createElement("div");
+  projetoDiv.classList.add("projeto-container");
+
+  let projetoH4 = document.createElement("h4");
+  projetoH4.textContent = projeto.title;
+  projetoH4.classList.add("projeto-title");
+
+  let setaH4 = document.createElement("h4");
+  setaH4.textContent = "➜";
+  setaH4.classList.add("seta-title");
+
+  let setaDIV = document.createElement("div");
+  setaDIV.classList.add("seta-container");
+
+  setaDIV.appendChild(setaH4);
+
+  projetoDiv.appendChild(setaDIV);
+  projetoDiv.appendChild(projetoH4);
+  projetoLink.appendChild(projetoDiv);
+  projetoLi.appendChild(projetoLink);
+
+  nameProjetos.appendChild(projetoLi);
+
+  // Criar a camada de fundo da imagem
+  let backgroundLayer = document.createElement("div");
+  backgroundLayer.classList.add("background-layer");
+  imageProjeto.appendChild(backgroundLayer);
+
+  // Inicialização dos estilos de transição e opacidade
+  setaH4.style.transform = "translateX(-100%)";
+  setaH4.style.opacity = "0";
+
+  // Evento de hover para mostrar a imagem como background
+  projetoLi.addEventListener("mouseenter", () => {
+    // Exibe a seta e empurra o título
+    setaH4.style.transform = "translateX(0)";
+    setaH4.style.opacity = "1";
+    setaH4.style.visibility = "visible";
+    setaH4.style.transition = "0.25s ease-in-out";
+
+    projetoH4.style.transform = "translateX(24px)";
+    projetoH4.style.transition = "0.35s ease-in-out";
+
+    backgroundLayer.style.transition = "opacity 0.5s ease-in-out"; // A transição da opacidade da camada de fundo
+    backgroundLayer.style.opacity = "1"; // Torna a camada visível
+
+    backgroundLayer.style.backgroundImage = `url(${projeto.image})`;
+    backgroundLayer.style.backgroundSize = "cover";
+    backgroundLayer.style.backgroundPosition = "center";
+    backgroundLayer.style.backgroundRepeat = "no-repeat";
+  });
+
+  // Evento de hover para remover a imagem de background
+  projetoLi.addEventListener("mouseleave", () => {
+    // Esconde a seta e retorna o título para a posição original
+    setaH4.style.transform = "translateX(-100%)";
+    setaH4.style.opacity = "0";
+
+    projetoH4.style.transform = "translateX(0)";
+
+    backgroundLayer.style.transition = "opacity 0.5s ease-in-out"; // Transição suave da opacidade
+    backgroundLayer.style.opacity = "0"; // Torna a camada invisível
+  });
 });

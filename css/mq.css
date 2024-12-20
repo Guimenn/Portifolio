@@ -1,4 +1,4 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     .intro {
         width: auto;
         margin-left: 5vw;
@@ -21,5 +21,62 @@
     .card-comp {
         width: 100%;
     }
-    
+
+    .image-projetos {
+        display: none;
+    }
+
+    .list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .li-projeto {
+        width: 80%;
+        margin: auto;
+    }
+
+    .card-me p {
+        width: 80%;
+    }
+
+    .card-me {
+        margin-left: 20px;
+    }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+    .li-projeto {
+        width: 80%;
+        margin: auto;
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        width: 70%;
+    }
+
+    .job {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+    .list {
+
+        height: auto;
+    }
+
+    .list h1 {
+        font-size: 25px;
+    }
+
+    .card-comp {
+        width: 60%;
+    }
 }

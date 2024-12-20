@@ -114,7 +114,7 @@
                 <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
                     id="navbar-language">
                     <ul
-                        class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-black md:dark:bg-white-900 dark:border-white-700">
+                        class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-black dark:bg-black md:dark:bg-black dark:border-black">
                         <li>
                             <a href="#" class="block py-2 px-3 text-white rounded md:bg-transparent md:p-0"
                                 aria-current="page">Home</a>
@@ -141,7 +141,7 @@
         </nav>
     </header>
     <main>
-        <section>
+        <section id="">
             <div class="intro">
                 <div class="name">
                     <img src="img/foto.png" alt="">
@@ -157,7 +157,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section id="tech">
             <div class="technology flex flex-row items-center justify-center gap-4 flex-wrap mt-4
             ">
                 <h1 class="text-xl text-[white] font-normal    " id="tech">
@@ -421,7 +421,7 @@
         <section id="compe">
             <div class="comp">
                 <div class="flex flex-col container-comp">
-                    <div class="card-comp border">
+                    <div class="card-comp border" id="right">
                         <img class="img-icon"
                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACfUlEQVR4nO1ZPW8TQRBdR0F8lDTeiYLT8F8CCIlfAAQlIIToCFDyf2gd3F5mT7iAi5hxrkIIQ4KQKGgpnMChWa+TkxXQ3dnHrdE+acvZmXcz8+ydUSogIGBmrPb7F4HNfSDsacYvwOYI2GQ1nSPrg7AnPteG0YXZGSil2mRuajIHNQb+16MJP+vB7o2ZSMAAHwPhT3fpG03m9so+XlFRtKzqQhQtiw9N8R0gfOt8H2s2jypnwpE41rT7RGVZS/1rZFlLE26fxMHx9dI9MSknS6JhAJtn48zgp1I9A4P4waScGsnENLKsBYSJI7OlisIpRiY9oTyBZrzrPu5OcSMyh2JkG9sTQBp33Mc9KG7EOBKjWtWpLJLknCutUWGbiYYrzwBl4wpE/gBN5gUQflCLnJHVtH8ZGL8B4a+FJHL1fe88MN7ShGzvW0QiwOZr7j9atrhECF/mj2b8sZBEzvyBDUROETKi5oRQWlMIpaXmhFBaUwilpeaE/6a0gDHVhN+bIxL5+NQ15Yn4NHzQe6/XKhORsaXyBCvvzL3KRGT26t+AzlQgMp6Gb9caZJF4BvHzfEzFDXOvOnnptRmfNjTEXrIk5LUpsVTPCG6dPFkJEzu2TOOOKEit6pTGnTbjhiaz53wLkc0KRE4njZrMNWDzsalFD4hvwvVKk8bp2S8kySW7eGGzA2yGE6L1HBw5H10ZosuKIy+/5Wa/ZF75Jr9txg1HtFvYyC4+/ZLfpVy/bBa2k62QLCE9lN+hDP5KGcsmVfZ23sgv21jWK90jm1R7QdPyy7KQxYcz3SubVFlCNii/w8qZOKtn7I/jWBIP65ZfPfbRlcYu3RMBAWqu+A1w8c9KwkGYygAAAABJRU5ErkJggg=="
                             alt="1-key">
@@ -437,7 +437,7 @@
 
 
                     </div>
-                    <div class="self-start card-comp">
+                    <div class="self-start card-comp" id="left">
                         <img class="img-icon"
                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADUUlEQVR4nO1Zv2sUQRSexIg/EAtRbubUxMLCQhDFShAthKjY2Rl/RBIliJ1RC7HRf8Dayjp2JqYR2XtvNQbdcG/2rggpcpqIilhYiGISszJzc+cRTtmdc7MTuA+m2eG9mW9n3jcz7zHWRhtttIxdExObhMQrgmCcS3gvJC4KiVFKbVGPQTCuxuypeBtbZ8AYyxGe4YRzKU78n40TvONh4XRLJEQI1wXBL+P0NSe8kC/BbuZ5XSwteF6XGoOTf1EQvDFjL3GJ16xXwpBY4lS4waKog602oqiDEwzX5yH9U4ljoradNImMISTeqq4MvE0UMyL0r9a2UyYrsRJR1CEIAkNmkMWFUYxIxQRzBFzCJfNzx+IbEc4rIx3YjkCU/W7zc+fiG0lYUEapqlNSBMF6s7UWYtvUNJw5BpF0Xm0iDRCycJRLeCIkfuAEP7WcEz4SobePrZUVEbJwTh1gteDkhCgIPxq/3/IlOOI8kW2Tk1uFxK/mnnSXRVGn7hgZWScI75vv0/XvrhIRIfRpe4KgWT8nkEZ9DrlNROI9/dcl3mnWzwkfmFU56zQRTjDECZ7xEI819U3wWPnOFf3ja1Z+c+Tt54Q/VODbPJiEC0SqbwyY1tuqiOdtfIisiQiCXiHhc13JbP3IjIjsKHtbOMFDQbCsJTmEvlb8iSyI7Cz5B7jEGePrea7o7WnFXyZE8lQ4yAm/cAnfRejftjn8sj9HAm+7IPikthIPXxy28eEGEXMNSfQkdfRkL5kryit9MP6lOX9F4SouYiTe8qF/YvWIeC4+dTE5EZeSD3zqZY81EZW2ZI4gX8TL1kRU7tW9BB1aEKnejYZTnWSc+YT+7cY52azIskog5yTczCiJ3alJqCR29b5muyIwWC8rEAQ6bVn2u5WCpKpOZb87J6GfE06ZsRWRAQsifzKNnPCkkDgb52xIqc2qZ4BVpnFl7lcEwWZdeJE4JiRWakTTabBgxhhVSXRV4miU32S5X8KnrslvTkK/IToa20gXPt2S386GeBmIbacSA6oI6aD8VvbOjG9IZKwqqTrt6Yr8Sj2XXis/qpJay+FmKr9SFWRhqCW/qpKqipAZym/FeiWaxYw+HKuSOJ+2/PLqGKMqsBPHRBttsP+K37NWSSXfpDf7AAAAAElFTkSuQmCC"
                             alt="2-key">
@@ -451,7 +451,7 @@
                             creatively and efficiently makes me adaptable to different contexts and demands.</p>
 
                     </div>
-                    <div class="card-comp border">
+                    <div class="card-comp border" id="right">
                         <img class="img-icon"
                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADdklEQVR4nO1ZS2sUQRCexAQfKCIStyuJiaCCKB7Ef+DB+Dp5EnxFEkVEQTE+8OIlF8GLKP6IXDcGwcds1cQgOslWbSIBD1mTeBARRSQe8nClZ3s2IcawO5vN9sJ+0Jftrer6pruquqscp4oqqigazQMD60HoIjD2KcHPIDQDQpkSjZlgDcY+vWZr2l1XPAPHcWJMJxTTRAkNX3YoxnGVShwrigSk8Cowzhml7xTT2cZh3O64bp1TKrhunV5DsXcOGN+btWeV0JXIO2FIzCpO3HQymRpntZHJ1CjGrpwd4h0t2CfC4xSQKDNA6HZ2Z/BTQT4DKe9SeJzKshOLkcnUAKNvyHQ6+cJEjIz2CccSKMHz5uP25i/ENKmFAse2BDDitZiPO5G/kOC0FippdCoUvl9vjtZ03jJhDHcsAxRq10oQgRSeVkwDSuiHEpwCwQ/A2L11tH9TxRBRjA9y1w2mARB6DYI/g9+YUg0j7kbriUDKOwiMf4DxixqiveHvW/wXm5Vgf5YM3rWeiBJ8ZJzy+j96k3jY6H5lPxHGl1q2aSixe/FcIycOVAyR5QBCD4u59kA5iWyTxP4Y4yFgepK9/GFc54SKI6IYx+ffFvQtlsTjUXVBOYk0Mp1SSTqjmB7rnGKiVndF+0jDcP9OQ2Y2lvT2VSwRDRB8ahLjNcdaIj09a7LZHMf/9xfFdF/rjgnesjyP0Gggn3L3LDkv9NyE4JN2X1GE7pnM/rZJ3ObchOvWLZj7qp/TVhPZ9bFvLTBh8NUFp4IdYOzRxhvf+KXzShTdsOrO7vv1SuiGLucoxu9K8Lc+cvoeFku6O6KqBZuiVjGAyESsfOpS4URsKj6owTetkYnosqVjCRqTdCEyEe2s9hXoKAKRbDW8q6RG5mNPyruz0KYoO6Lf3nPBdaI8RezagIR+x2hbou8IdubaCox+ULYc8VqiPozyjk4jXktMsF0xDZq1NZGOCETmK42K6QgIjS3c2lUeY8DYFqnSuLj2C76/IWi8CPWCUDokWpqB02aNuC6ih3eyMPwWVvtlemZb+I0Jthui8byFgsanXeG3doG/dOQtp7tCYdHAsvCb1rfrgoR1J1W/ra0JvxLY0hZJj+6kBgrKHX5FN2TxclF6dSdVNyHLGH7TkXdiKZ8JkmM2JE6WOvyq7Bpx7dgF+0QVVTgrir//6kqzIqV+owAAAABJRU5ErkJggg=="
                             alt="3-key">
@@ -470,66 +470,25 @@
                 </div>
             </div>
         </section>
-        <section>
-            <div class="job" id="projetos">
-
-
-                <h1 class="mb-4 text-3xl font-normal text-gray-900 dark:text-white md:text-5xl lg:text-6xl text-center">
-                    <span class="text-transparent bg-clip-text title-degradado">MY PROJECTS</span>
-                </h1>
-
-                <div class="flex justify-center align-center flex-wrap max-w-screen-xl gap-4 job-cards">
-
-                    <div class="bg-transparent border rounded-lg card-job justify-center
-                      ">
-                        <img class="rounded-t-lg" src="img/Bugatti.png" alt="" />
-                        </a>
-                        <div class="p-5">
-                            <a href="https://guimenn.github.io/Bugatti">
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">
-                                    BUGATTI</h5>
-                            </a>
-                            <p class="mb-3 font-normal text-white dark:text-white">Luxury Car Sales Page for the Bugatti
-                                Brand</p>
-                            <a href="https://guimenn.github.io/Bugatti"
-                                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg button-projeto">
-                                See Full Project
-                                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="flex justify-center align-center flex-wrap max-w-screen-xl gap-4 job-cards">
-
-                        <div class="bg-transparent border rounded-lg card-job justify-center
-                            <a href=" #">
-                            <img class="rounded-t-lg" src="img/rimac.png" alt="" />
-                            </a>
-                            <div class="p-5">
-                                <a href="https://guimenn.github.io/Rimac">
-                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">
-                                        RIMAC AUTOMOBILI</h5>
-                                </a>
-                                <p class="mb-3 font-normal text-white dark:text-white">Luxury Electric Supercar Sales
-                                    Page</p>
-                                <a href="https://guimenn.github.io/Rimac"
-                                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg button-projeto">
-                                    See Full Project
-                                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
-                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
+        <section id="projetos">
+            <div class="job flex flex-row justify-center align-center">
+                <div class="image-projetos flex flex-col bg-transparent overflow-hidden">
 
                 </div>
+                <div class="list flex flex-col">
+                    <h1
+                        class="mb-4 text-3xl font-normal text-gray-900 dark:text-white md:text-5xl lg:text-6xl text-start">
+                        <span class="text-transparent bg-clip-text title-degradado">MY PROJECTS</span>
+
+                    </h1>
+                    <ul class="name-projetos flex-start">
+                     
+                    </ul>
+                </div>
+
+          
+
+            </div>
         </section>
         <section class="sobre-mim" id="contato">
             <div class="me">
