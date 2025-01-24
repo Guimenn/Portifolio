@@ -3,9 +3,8 @@
         width: auto;
         margin-left: 5vw;
     }
-
     .technology h1 {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .cards {
@@ -23,7 +22,7 @@
     }
 
     .image-projetos {
-        display: none;
+        display: none !important;
     }
 
     .list {

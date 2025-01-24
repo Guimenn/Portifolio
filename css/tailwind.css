@@ -7,14 +7,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/**
- * Global styles
- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: url(../cursor/Cursor.png) 17 17, pointer !important;
+    cursor: url(../cursor/iconizer-iconizer-CURSOR-Voce.svg) 17 17, pointer !important;
 }
 
 /**
@@ -24,7 +21,8 @@ html,
 body {
     min-height: 100vh;
     background: url(../img/img.png) center center no-repeat fixed;
-    background-color: black;
+    background-size: cover;
+    background-color: #4d4c4c;
     color: white;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
     scroll-behavior: smooth;
@@ -34,6 +32,16 @@ body {
 /**
  * Nav styles
  */
+
+header {
+    background: url(../img/cima.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: 100px;
+}
+
 nav,
 nav ul {
     background-color: transparent !important;
@@ -43,6 +51,9 @@ nav ul {
 nav ul li a:hover {
     color: #19D1C2 !important;
     background-color: transparent !important;
+
+
+
 }
 
 /**
@@ -187,92 +198,6 @@ nav ul li a:hover {
 }
 
 
-.job {
-    height: 100vh;
-    gap: 20px;
-    width: 100%;
-}
-
-.image-projetos {
-    gap: 1rem;
-    width: 50%;
-    height: 60%;
-    border-radius: 25px 100px;
-    transition: transform 0.5s ease-in-out;
-    align-items: flex-start;
-    padding: 1rem;
-    position: relative;
-  }
-  
-  .background-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Pode ser ajustado conforme desejado */
-    opacity: 0; /* Inicialmente invisível */
-    transition: opacity 0.5s ease-in-out; /* A transição da opacidade */
-  }
-  
-
-.list {
-    gap: 1rem;
-    padding: 1rem;
-    height: 70%;
-    width: 40%;
-    align-items: flex-start;
-}
-
-.name-projetos {
-    width: 100%;
-}
-
-.name-projetos ul {
-    width: 100%;
-    overflow-y: auto;
-}
-
-
-
-.li-projeto {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    align-items: flex-start;
-    padding: 1rem;
-    border-top: 2px solid #19D1C2;
-    font: 300 1.5rem "nunito sans", sans-serif;
-    text-align: justify;
-    color: white;
-    list-style: none;
-}
-
-.seta-container {
-    position: absolute;
-    color: #19D1C2;
-}
-
-
-.projeto-container {
-    display: flex;
-    flex-direction: row;
-    transform: translateX(-10px);
-}
-
-.seta-title {
-    position: absolute;
-}
-
-.seta-title h4 {
-    color: white;
-    font: 300 18px "nunito sans", sans-serif;
-    text-align: justify;
-    width: 100%;
-    padding-right: 12px;
-    transform: translateX(20px);
-}
-
 
 
 .card-me {
@@ -323,11 +248,45 @@ nav ul li a:hover {
     border-radius: 10px;
 }
 
+.name-projetos {
+    list-style: none;
+    padding: 0;
+}
+
+.li-projeto {
+    margin: 10px 0;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+}
+
+.projeto-title {
+    display: inline-block;
+    transition: transform 0.35s ease-in-out;
+}
+
+.seta-title {
+    display: inline-block;
+    transform: translateX(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.25s ease-in-out;
+}
+
 .git,
 .insta,
 .whats,
 .linkedin {
     border-radius: 50%;
+}
+
+.trf a{
+    transition: all 0.3s ease-in-out;
+}
+
+.trf a:hover {
+
+    transform: translate(-3px, 5px);
 }
 
 .name {
@@ -359,6 +318,8 @@ nav ul li a:hover {
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.082);
 }
 
+
+
 .img-icon {
     margin-bottom: 25px;
     width: 50px;
@@ -386,4 +347,14 @@ nav ul li a:hover {
     width: 75%;
     display: flex;
     gap: 2rem;
+}
+
+footer {
+    background: url(../img/baixo.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height:
+        60px;
 }

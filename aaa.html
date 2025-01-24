@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Animation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #1e1e1e, #333);
+        }
+
+        svg {
+            width: 80%;
+            height: auto;
+        }
+
+        path {
+            stroke: #10e956;
+            stroke-width: 5;
+            fill: none;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: draw 4s ease-in-out forwards, scale 0.5s ease-in-out forwards;
+        }
+
+        @keyframes draw {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes scale {
+            0% {
+                transform: scale(0.8);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<svg height="100%" width="100%" viewBox="0 0 857 151" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <!-- G -->
+    <path d="M110,100 C85,100 65,80 65,50 C65,20 85,0 110,0 C135,0 155,20 155,40 L135,40 C135,30 125,20 110,20 C95,20 85,30 85,50 C85,70 95,80 110,80 C120,80 130,70 130,60 L100,60 L100,50 L155,50 C155,80 135,100 110,100 Z" />
+    <!-- U -->
+    <path d="M210,0 L210,50 C210,80 230,100 260,100 C290,100 310,80 310,50 L310,0 L280,0 L280,50 C280,70 270,90 260,90 C250,90 240,70 240,50 L240,0 L210,0 Z" />
+    <!-- I -->
+    <path d="M320,0 L320,100 L350,100 L350,0 L320,0 Z" />
+    <!-- M -->
+    <path d="M380,0 L380,100 L410,100 L410,30 L430,60 L450,30 L450,100 L480,100 L480,0 L450,0 L430,40 L410,0 L380,0 Z" />
+    <!-- E -->
+    <path d="M490,0 L490,100 L550,100 L550,80 L520,80 L520,60 L550,60 L550,40 L520,40 L520,20 L550,20 L550,0 L490,0 Z" />
+    <!-- N -->
+    <path d="M570,0 L570,100 L600,100 L600,40 L630,100 L660,100 L660,0 L630,0 L630,60 L600,0 L570,0 Z" />
+</g>
+
+</svg>
+
+</body>
+</html>

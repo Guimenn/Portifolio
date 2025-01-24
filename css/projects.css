@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Fleur+De+Leah&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playwrite+DE+VA+Guides&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url(../cursor/iconizer-iconizer-CURSOR-Voce.svg) 17 17, pointer !important;
+}
+
+/**
+ * HTML and body styles
+ */
+html,
+body {
+    min-height: 100vh;
+    background: url(../img/img.png) center center no-repeat fixed;
+    background-color: black;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+
+
+main {
+	height: 100%;
+	margin-top: 20vh;
+	width: 100%;
+}
+.job {
+    height: 100vh;
+    gap: 20px;
+    width: 100%;
+}
+.image-projetos {
+    gap: 1rem;
+    width: 50%;
+    height: 60%;
+    border-radius: 25px 100px;
+    transition: transform 0.5s ease-in-out;
+    align-items: flex-start;
+    padding: 1rem;
+    position: relative;
+  }
+  
+  .background-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Pode ser ajustado conforme desejado */
+    opacity: 0; /* Inicialmente invisível */
+    transition: all 0.5s ease-in-out; /* A transição da opacidade */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: auto;
+  }
+  
+
+.list {
+    gap: 1rem;
+    padding: 1rem;
+    height: 70%;
+    width: 40%;
+    align-items: flex-start;
+}
+
+.name-projetos {
+    width: 100%;
+}
+
+.name-projetos ul {
+    width: 100%;
+    overflow-y: auto;
+}
+
+
+
+.li-projeto {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-items: flex-start;
+    padding: 1rem;
+    border-top: 2px solid #19D1C2;
+    font: 300 1.5rem "nunito sans", sans-serif;
+    text-align: justify;
+    color: white;
+    list-style: none;
+}
+
+.seta-container {
+    position: absolute;
+    color: #19D1C2;
+}
+
+
+.projeto-container {
+    display: flex;
+    flex-direction: row;
+    transform: translateX(-10px);
+}
+
+.seta-title {
+    position: absolute;
+}
+
+.seta-title h4 {
+    color: white;
+    font: 300 18px "nunito sans", sans-serif;
+    text-align: justify;
+    width: 100%;
+    padding-right: 12px;
+    transform: translateX(20px);
+}
+
+
