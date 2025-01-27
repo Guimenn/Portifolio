@@ -1,8 +1,6 @@
 <?php
 include_once 'includes/imports.php';
 
-
-
 ?>
 
 <!doctype html>
@@ -25,8 +23,12 @@ include_once 'includes/imports.php';
 
 </head>
 
-<body>
-
+<body class="relative font-sans antialiased">
+    <div class="splash-screen">
+        <svg class="drawing" viewBox="0 0 500 150" xmlns="http://www.w3.org/2000/svg">
+            <text x="60" y="100" class="text-path">GUIMEN</text>
+        </svg>
+    </div>
     <header>
         <nav class=" border-gray-200 dark:bg-black">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -139,7 +141,8 @@ include_once 'includes/imports.php';
         </nav>
     </header>
     <main>
-        <section>
+
+        <section class="flex flex-row">
             <div class="intro flex flex-col align-flex-start justify-center">
                 <div class="name">
                     <img src="img/foto.png" alt="">
@@ -151,6 +154,19 @@ include_once 'includes/imports.php';
                             class="text-[#19D1C2]">PROJETO</span> </h1>
                     <br>
                     <p class="text-p">CRIANDO SISTEMAS COM PAIXÃO E APRENDIZADO CONSTANTE!</p>
+                </div>
+
+            </div>
+            <div class="atom">
+                <div class="center"></div>
+                <div class="orbit orbit1">
+                    <div class="electron elector1"></div>
+                </div>
+                <div class="orbit orbit2">
+                    <div class="electron electron2"></div>
+                </div>
+                <div class="orbit orbit3">
+                    <div class="electron electron3"></div>
                 </div>
             </div>
         </section>
@@ -282,9 +298,32 @@ include_once 'includes/imports.php';
         </section>
 
     </main>
-    <?php Footer($footer); ?>
-    <script src="js/script.js"></script>
 
+    <button id="scrollTopButton" onclick="scrollToTop()">
+        <svg height="1.2em" class="arrow" viewBox="0 0 512 512">
+            <path
+                d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z">
+            </path>
+        </svg>
+    </button>
+
+    <?php Footer($footer); ?>
+    <script>
+        const scrollTopButton = document.getElementById("scrollTopButton");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 500) {
+                scrollTopButton.style.display = "flex";
+            } else {
+                scrollTopButton.style.display = "none";
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+    <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
     <script src="tailwind.config.js"></script>
 

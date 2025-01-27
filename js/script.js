@@ -115,6 +115,21 @@ ScrollReveal().reveal(JobCards2, {
   interval: 500
 }); 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const splashScreen = document.querySelector(".splash-screen");
+  const content = document.querySelector(".content");
+
+  const hideSplashScreen = () => {
+    splashScreen.classList.add("up");
+
+    setTimeout(() => {
+      content.classList.add("show");
+    }, 1500);
+  };
+  setTimeout(() => {
+    hideSplashScreen();
+  }, 3500);
+});
 
 
 

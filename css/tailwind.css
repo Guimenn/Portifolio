@@ -2,7 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Delius&family=Fleur+De+Leah&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playwrite+DE+VA+Guides&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -28,6 +27,98 @@ body {
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
+
+
+
+/* Splash Screen */
+.splash-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #000000, #232324);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 1;
+    transition: opacity 1s ease-out, transform 1.5s ease-in-out;
+}
+
+.drawing {
+    width: 80%;
+    height: auto;
+}
+
+.text-path {
+    font-family: "Arial Black", sans-serif;
+    font-size: 80px;
+    fill: none;
+    stroke: #19D1C2;
+    stroke-width: 3;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw 4.6s cubic-bezier(0.65, 0, 0.35, 1) forwards,
+        fillColor 1.5s ease-in 1.5s forwards;
+    text-shadow: 0 0 50px #19D1C2;
+}
+
+
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+
+    }
+}
+
+@keyframes fillColor {
+    to {
+        fill: #19D1C2;
+        stroke: none;
+    }
+}
+
+.splash-screen.up {
+    animation: slideUp .5s ease-in-out forwards;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+
+.content {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    animation: fadeInContent 1s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+.content.show {
+    display: block;
+}
+
+@keyframes fadeInContent {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /**
  * Nav styles
@@ -56,9 +147,138 @@ nav ul li a:hover {
 
 }
 
+#scrollTopButton {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(#000000, #222424);
+    display: flex;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.arrow path {
+    fill: white;
+}
+
+#scrollTopButton:hover .arrow {
+    animation: slide-in-bottom .7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-bottom {
+    0% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
 /**
  * Intro styles
  */
+
+.atom {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
+
+.center {
+    width: 30px;
+    height: 30px;
+    background: orange;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px orange, 0 0 50px orange;
+}
+
+.orbit {
+    position: absolute;
+    /* Change to absolute */
+    top: 20%;
+    /* Center the orbit */
+    left: 0%;
+    /* Center the orbit */
+    translate: -50%, -50%;
+    /* Center it perfectly */
+    border-radius: 50%;
+    /* Keep the elliptical shape */
+    border: 1px dashed rgba(255, 255, 255, 0.3);
+    transform-style: preserve-3d;
+    animation: rotate 3s linear infinite;
+}
+
+.orbit1 {
+    width: 200px;
+    /* Major axis */
+    height: 120px;
+    /* Minor axis */
+    transform: translate(-50%, -50%) rotateX(45deg);
+    /* Combine centering and rotation */
+}
+
+.orbit2 {
+    width: 200px;
+    height: 120px;
+    transform: translate(-50%, -50%) rotateX(-45deg);
+    animation-duration: 5s;
+}
+
+.orbit3 {
+    width: 200px;
+    height: 120px;
+    transform: translate(-50%, -50%) rotateY(90deg);
+    animation-duration: 10s;
+}
+
+.electron {
+    width: 15px;
+    height: 15px;
+
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px cyan, 0 0 30px cyan;
+}
+
+.electron1 {
+    background: rgba(0, 150, 255);
+}
+
+.electron2 {
+    background: rgba(0, 0, 255);
+}
+
+.electron3 {
+    background: rgba(255, 0, 255);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .intro {
     color: white;
     align-content: center;
@@ -223,7 +443,7 @@ nav ul li a:hover {
     color: #19D1C2;
     font-weight: 400;
     font-family: "nunito sans", sans-serif;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.082);
+    text-shadow: 0 0 10px #19d1c2a8;
 }
 
 .texts h2 {
@@ -280,13 +500,32 @@ nav ul li a:hover {
     border-radius: 50%;
 }
 
-.trf a{
+.trf a {
     transition: all 0.3s ease-in-out;
 }
 
 .trf a:hover {
-
     transform: translate(-3px, 5px);
+}
+
+.trf img {
+    transition: all 0.3s ease-in-out;
+}
+
+.trf .insta:hover {
+    box-shadow: 0 0 10px #dd001a8c;
+}
+
+.trf .whats:hover {
+    box-shadow: 0 0 10px #25d3659c;
+}
+
+.trf .linkedin:hover {
+    box-shadow: 0 0 10px #0076b58c;
+}
+
+.trf .git:hover {
+    box-shadow: 0 0 10px #F1F1F1;
 }
 
 .name {
@@ -307,6 +546,7 @@ nav ul li a:hover {
     justify-content: center;
 }
 
+
 .card-comp {
     padding: 1.5rem;
     border: 1px solid rgba(75, 74, 74, 0.781);
@@ -317,8 +557,6 @@ nav ul li a:hover {
     border-radius: 7px;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.082);
 }
-
-
 
 .img-icon {
     margin-bottom: 25px;

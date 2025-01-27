@@ -289,6 +289,31 @@ require_once 'includes/imports.php';
         </section>
         <?php Footer($footer); ?>
     </main>
+    
+    <button id="scrollTopButton" onclick="scrollToTop()">
+        <svg height="1.2em" class="arrow" viewBox="0 0 512 512">
+            <path
+                d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z">
+            </path>
+        </svg>
+    </button>
+
+    <?php Footer($footer); ?>
+    <script>
+        const scrollTopButton = document.getElementById("scrollTopButton");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 500) {
+                scrollTopButton.style.display = "flex";
+            } else {
+                scrollTopButton.style.display = "none";
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
     <script src="tailwind.config.js"></script>
