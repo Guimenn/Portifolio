@@ -1,6 +1,6 @@
 # 🚀 **Guilherme Vidichosqui Men - Portfólio**
 
-[🔗 **Visite meu portfólio online!**](https://github.com/Guimenn/Portifolio)
+[🔗 **Visite meu portfólio online!**](https://guimenn.github.io/Portifolio)
 
 👨‍💻 **Olá!** Me chamo **Guilherme Vidichosqui Men** e sou um futuro desenvolvedor full stack com uma paixão imensa por tecnologia! Este repositório contém meu **portfólio online**, onde você pode ver minhas **habilidades**, **projetos** e mais. Sempre busco novos desafios e oportunidades para evoluir e criar soluções inovadoras.
 
@@ -76,6 +76,8 @@ Para rodar este projeto na sua máquina, siga os seguintes passos:
 git clone https://github.com/Guimenn/Portifolio.git
 cd Portifolio
 # Abra o arquivo index.html em seu navegador.
+```
+
 
 📫 Como Me Encontrar?
 ✉️ Email: men.guilherme5@gmail.com
