@@ -418,6 +418,99 @@ nav ul li a:hover {
 }
 
 
+.job {
+    height: 100vh;
+    gap: 20px;
+    width: 100%;
+}
+.image-projetos {
+    gap: 1rem;
+    width: 50%;
+    height: 60%;
+    border-radius: 25px 100px;
+    transition: transform 0.5s ease-in-out;
+    align-items: flex-start;
+    padding: 1rem;
+    position: relative;
+  }
+  
+  .background-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Pode ser ajustado conforme desejado */
+    opacity: 0; /* Inicialmente invisível */
+    transition: all 0.5s ease-in-out; /* A transição da opacidade */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: auto;
+  }
+  
+
+.list {
+    gap: 1rem;
+    padding: 1rem;
+    height: 70%;
+    width: 40%;
+    align-items: flex-start;
+}
+
+.name-projetos {
+    width: 100%;
+}
+
+.name-projetos ul {
+    width: 100%;
+    overflow-y: auto;
+}
+
+
+
+.li-projeto {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    align-items: flex-start;
+    padding: 1rem;
+    border-top: 2px solid #19D1C2;
+    font: 300 1.5rem "nunito sans", sans-serif;
+    text-align: justify;
+    color: white;
+    list-style: none;
+}
+
+.seta-container {
+    position: absolute;
+    color: #19D1C2;
+}
+
+
+.projeto-container {
+    display: flex;
+    flex-direction: row;
+    transform: translateX(-10px);
+}
+
+.seta-title {
+    position: absolute;
+}
+
+.seta-title h4 {
+    color: white;
+    font: 300 18px "nunito sans", sans-serif;
+    text-align: justify;
+    width: 100%;
+    padding-right: 12px;
+    transform: translateX(20px);
+}
+
+
+
+
+
 
 
 .card-me {
