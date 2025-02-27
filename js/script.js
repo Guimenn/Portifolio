@@ -31,22 +31,21 @@ document.addEventListener('DOMContentLoaded', () => {
   typeWriterEffect();
 });
 
-let projetos = [
-  {
+let projetos = [{
     title: "Rimac",
-    image: "../img/rimac.png", // Caminho da imagem do projeto Rimac
+    image: "img/rimac.png", // Caminho da imagem do projeto Rimac
     link: "https://guimenn.github.io/Rimac"
   },
   {
     title: "Bugatti",
-    image: "../img/Bugatti.png", // Caminho da imagem do projeto Bugatti
+    image: "img/Bugatti.png", // Caminho da imagem do projeto Bugatti
     link: "https://guimenn.github.io/Bugatti"
   },
   {
     title: "EstudoMind",
-    image: "../img/estudomind.png",
+    image: "img/estudomind.png",
     link: "https://www.mediafire.com/file/q5w1hxi0cavtbox/Estudomind.zip/file"
-  } 
+  }
 ];
 let nameProjetos = document.querySelector(".name-projetos");
 let imageProjeto = document.querySelector(".image-projetos");
@@ -208,18 +207,29 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 3500);
 });
 
-const social =[
-  {
-    link: "https://www.linkedin.com/in/guimenn/", name: "Linkedin", icon: "img/icons8-linkedin.svg", class: "linkedin"
+const social = [{
+    link: "https://www.linkedin.com/in/guimenn/",
+    name: "Linkedin",
+    icon: "img/icons8-linkedin.svg",
+    class: "linkedin"
   },
   {
-    link: "https://github.com/guimenn", name: "Github", icon: "img/icons8-github.gif", class: "git"
+    link: "https://github.com/guimenn",
+    name: "Github",
+    icon: "img/icons8-github.gif",
+    class: "git"
   },
   {
-    link: "https://www.instagram.com/guimen/", name: "Instagram", icon: "img/icons8-instagram.svg", class: "insta"
+    link: "https://www.instagram.com/guimen/",
+    name: "Instagram",
+    icon: "img/icons8-instagram.svg",
+    class: "insta"
   },
   {
-    link: "https://api.whatsapp.com/send?phone=5511933705007&text=Olá%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços! ", name: "Whatsapp", icon: "img/icons8-whatsapp.svg", class: "whats"
+    link: "https://api.whatsapp.com/send?phone=5511933705007&text=Olá%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços! ",
+    name: "Whatsapp",
+    icon: "img/icons8-whatsapp.svg",
+    class: "whats"
   }
 ];
 
@@ -234,9 +244,3 @@ social.forEach(social => {
   `;
   socialContainer.appendChild(elemento);
 });
-
-
-
-
-
-

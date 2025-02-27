@@ -2,7 +2,7 @@
 
 [🔗 **Visite meu portfólio online!**](https://guimenn.github.io/Portifolio)
 
-👨‍💻 **Olá!** Me chamo **Guilherme Vidichosqui Men** e sou um futuro desenvolvedor full stack com uma paixão imensa por tecnologia! Este repositório contém meu **portfólio online**, onde você pode ver minhas **habilidades**, **projetos** e mais. Sempre busco novos desafios e oportunidades para evoluir e criar soluções inovadoras.
+👨‍💻 **Olá!** Me chamo **Guilherme Vidichosqui Men** e sou um futuro desenvolvedor full stack com uma paixão imensa por tecnologia! Este repositório contém meu **Portfólio online**, onde você pode ver minhas **habilidades**, **projetos** e mais. Sempre busco novos desafios e oportunidades para evoluir e criar soluções inovadoras.
 
 ---
 
